@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivarth Rai - Hobbies</title>
+    <style>
+        /* Same CSS as main page up to .container */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+
+        /* Hobbies-specific styles */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .hobby-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobby-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .hobby-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .hobby-card p {
+            color: #666;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">My Hobbies & Interests</h1>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <div class="hobby-icon">🎮</div>
+                <h3>Gaming</h3>
+                <p>Passionate about strategy games and eSports. Currently playing Valorant and CS:GO competitively.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="hobby-icon">📚</div>
+                <h3>Reading</h3>
+                <p>Love reading science fiction and technical books. Currently exploring machine learning literature.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="hobby-icon">🎸</div>
+                <h3>Music</h3>
+                <p>Learning guitar and enjoying various genres from classical to rock. Also interested in music production.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="hobby-icon">✈️</div>
+                <h3>Traveling</h3>
+                <p>Exploring new places, experiencing different cultures, and documenting adventures through photography.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
