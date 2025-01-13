@@ -1,48 +1,57 @@
-class Solution {
-public:
-    bool canBeValid(string s, string locked) {
-        int n = s.length();
-        if(n % 2 == 1)return false;
-       
-
-        stack<int> unl;
-        stack<int> cl;
-
-
-        for(int i = 0; i < n; i++)
-        {
-            if(locked[i] == 0)
-                unl.push(i);
-            else if(s[i] == '(')
-                cl.push(i);
-            else if(s[i] == ')')
-            {
-                if(!cl.empty())
-                    cl.pop();
-                else if(!unl.empty())
-                    unl.pop();
-                else {
-                        cout << "a" << endl;
-                    //return false;
-                }
-            }
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Zoo Adventures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
         }
-
-        while(!cl.empty() && !unl.empty() && cl.top() < unl.top()){
-                cl.pop();
-                unl.pop();
-            
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
-
-        if(cl.empty() && !unl.empty()){
-            cout << "b" << endl;
-            return (unl.size() % 2 == 0);
+        .blog-list {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        cout << "c" << endl;
-        return cl.empty();
-
-
-
-    }
-};
+        .blog-link {
+            display: block;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #e9e9e9;
+            color: #333;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .blog-link:hover {
+            background-color: #d5d5d5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Zoo Adventures</h1>
+        <p>Tales from the New Delhi Zoo</p>
+    </header>
+    <div class="blog-list">
+        <a href="blog1.html" class="blog-link">Blog 1: A Peaceful Day at New Delhi Zoo</a>
+        <a href="blog2.html" class="blog-link">Blog 2: The Day the Crows Attacked</a>
+    </div>
+</body>
+</html>
