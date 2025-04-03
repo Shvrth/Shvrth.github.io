@@ -1,15 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Plant</title>
-    <meta name="keywords" content="Vite, React, plants, gardening, Air Purifying Plants, Aromatic Fragrant Plants, Insect Repellent Plants, Medicinal Plants, Low Maintenance Plants" /> <!-- Add meta keywords here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimalHaze3K Dataset Documentation</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #34495e;
+        }
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dataset-stats {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .structure-wrapper {
+            font-family: 'SF Mono', Menlo, monospace;
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        .links-section {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .dataset-link {
+            text-decoration: none;
+            color: white;
+            background-color: var(--secondary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .dataset-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AnimalHaze3K Dataset</h1>
+        
+        <div class="dataset-description">
+            <p>A specialized image dehazing dataset focusing on animal subjects in diverse environmental conditions. Contains 4,636 carefully curated images across multiple splits.</p>
+        </div>
+
+        <div class="dataset-stats">
+            <h2>Dataset Splits</h2>
+            <ul>
+                <li><strong>Training Set:</strong> 
+                    <br>1,041 clean reference images 
+                    <br>3,123 hazy counterparts</li>
+                <li><strong>Test Set:</strong> 
+                    <br>59 clean images 
+                    <br>177 hazy versions</li>
+                <li><strong>Validation Set:</strong> 
+                    <br>59 clean images 
+                    <br>177 hazy versions</li>
+            </ul>
+        </div>
+
+        <div class="structure-section">
+            <h2>Directory Structure</h2>
+            <div class="structure-wrapper">
+AnimalHaze3k/
+├── train/
+│   ├── train_hazy
+│   └── train_clean
+├── test/
+│   ├── test_hazy
+│   └── test_clean
+└── val/
+    ├── val_hazy
+    └── val_clean
+            </div>
+        </div>
+
+        <div class="links-section">
+            <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k" 
+               class="dataset-link" 
+               target="_blank">
+                View on Hugging Face
+            </a>
+            
+            <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k/resolve/main/AnimalHaze3K.tar" 
+               class="dataset-link" 
+               download
+               target="_blank">
+                Download Dataset (TAR)
+            </a>
+        </div>
+    </div>
+</body>
 </html>
