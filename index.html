@@ -6,100 +6,140 @@
     <title>AnimalHaze3K Dataset Documentation</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #34495e;
+            --primary-green: #2b6f5c;
+            --secondary-blue: #3a7a8c;
+            --accent-coral: #ff6b6b;
+            --background-light: #f8faf9;
+            --text-dark: #2d3e3a;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 2rem;
-            background-color: #f8f9fa;
-            color: var(--text-color);
+            background-color: var(--background-light);
+            color: var(--text-dark);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            background: rgb(235, 249, 214);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
         h1 {
-            color: var(--primary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .dataset-stats {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
+            background: #f0f7f5;
+            padding: 1.8rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid rgba(43, 111, 92, 0.1);
         }
 
         .structure-wrapper {
-            font-family: 'SF Mono', Menlo, monospace;
-            background: #2c3e50;
-            color: #ecf0f1;
+            font-family: 'JetBrains Mono', monospace;
+            background: #f0f7f5;
+            color: var(--text-dark);
             padding: 1.5rem;
             border-radius: 8px;
             overflow-x: auto;
             white-space: pre;
+            border: 1px solid #e0e7e5;
         }
 
-        .links-section {
-            margin-top: 2rem;
+        .top-links {
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
         }
 
         .dataset-link {
             text-decoration: none;
             color: white;
-            background-color: var(--secondary-color);
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 500;
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dataset-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
         }
 
         .dataset-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 15px rgba(58, 122, 140, 0.25);
         }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
+        @media (max-width: 768px) {
+            .header-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
             }
             
-            .container {
-                padding: 1rem;
+            .top-links {
+                width: 100%;
+                flex-direction: column;
             }
             
-            h1 {
-                font-size: 1.8rem;
+            .dataset-link {
+                justify-content: center;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>AnimalHaze3K Dataset</h1>
-        
-        <div class="dataset-description">
-            <p>A specialized image dehazing dataset focusing on animal subjects in diverse environmental conditions. Contains 4,636 carefully curated images across multiple splits.</p>
+        <div class="header-row">
+            <h1>AnimalHaze3K Dataset</h1>
+            <div class="top-links">
+                <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k" 
+                   class="dataset-link" 
+                   target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Hugging Face
+                </a>
+                <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k/resolve/main/AnimalHaze3K.tar" 
+                   class="dataset-link" 
+                   download
+                   target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18L5.33 8.67 6 10l6-4 6 4 .67-1.33L12 2z"/></svg>
+                    Download Dataset
+                </a>
+            </div>
         </div>
 
+        <!-- Rest of your content remains the same -->
+        <div class="dataset-description">
+            <p>AnimalHaze3k is an image dehazing dataset focused on animal subjects in diverse environments. Contains 4,636 carefully curated images across three splits:</p>
+        </div>
         <div class="dataset-stats">
-            <h2>Dataset Splits</h2>
             <ul>
                 <li><strong>Training Set:</strong> 
                     <br>1,041 clean reference images 
@@ -127,21 +167,6 @@ AnimalHaze3k/
     ├── val_hazy
     └── val_clean
             </div>
-        </div>
-
-        <div class="links-section">
-            <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k" 
-               class="dataset-link" 
-               target="_blank">
-                View on Hugging Face
-            </a>
-            
-            <a href="https://huggingface.co/datasets/shvrth/AnimalHaze3k/resolve/main/AnimalHaze3K.tar" 
-               class="dataset-link" 
-               download
-               target="_blank">
-                Download Dataset (TAR)
-            </a>
         </div>
     </div>
 </body>
