@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Course and Program Outcome Tracking and Analysis"
+date:   2025-04-18 12:00:00 +00:00
+image: /images/shiv/copo-thumbnail.png
+categories: projects
+paper: pdfs/shiv/CSE3243WPL_Report_CO_PO.pdf
+course: CSE3243 Web Programming
+---
+
+Developed for the School of Computing, this MERN-stack platform digitizes Outcome-Based Education workflows, replacing manual Excel tracking. Key technical contributions include automated attainment calculations, role-based access, and bulk data integration.
