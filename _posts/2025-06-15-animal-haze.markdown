@@ -6,6 +6,7 @@ image: /images/shiv/animal-haze-thumbnail.png
 categories: research
 authors: "Shivarth Rai, Tejeswar Pokuri"
 venue: "Computer Vision for Animals Workshop, CVPR 2025 (Oral)"
+arxiv: /pdfs/shiv/enhancing_wildlife_paper.pdf
 dataset: https://huggingface.co/datasets/shvrth/AnimalHaze3k
 slides: /pdfs/shiv/cv4animals-slides.pdf
 youtube: https://youtu.be/VOPAEnqiYp8?si=dc7PW_WtuxVSeh5l&t=11011
